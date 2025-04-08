@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native'
 import  {styles}  from './Styles/Styles';
 import SplashScreen from './Screens/SplashScreen';
+import AuthScreen from './Screens/AuthScreen';
 import HomeScreen from './Screens/HomeScreen';
 import { useEffect, useState } from 'react';
 
@@ -14,9 +15,9 @@ export default function App() {
     useEffect(()=>{
       setTimeout(()=>{
         setIsSplash(false)
-      }, 3000)
+      }, 500)
     })
-
+ 
     return(
       <>
       {isSplash?

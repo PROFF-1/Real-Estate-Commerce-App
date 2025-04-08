@@ -1,29 +1,39 @@
 import { StyleSheet, Text, View,Platform,StatusBar } from 'react-native'
 import React from 'react'
+import HomeScreen from '../Screens/HomeScreen'
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems:'center',
-    justifyContent:'center',
    
   },
+  splashScreenContainer:{
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems:'center',
+    justifyContent:'center',
+  },
 
-  homeScreenContainer:{
+  authScreenContainer:{
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
     alignItems: 'center'
   },
 
-  homeTextContainer:{
+  homeScreeenContainer:{
+    backgroundColor:'#fff',
+    
+  },
+
+  authTextContainer:{
     justifyContent:'center',
     alignItems:'center',
     marginBottom:30
   },
 
-  homeTextInner:{
+  authTextInner:{
     alignItems:'center',
     justifyContent:'center',
     backgroundColor:'black',

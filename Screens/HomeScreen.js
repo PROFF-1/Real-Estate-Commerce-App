@@ -1,31 +1,24 @@
-import { StyleSheet, Text, View,Image, SafeAreaView, TouchableOpacity } from 'react-native'
-import { StatusBar } from 'expo-status-bar';
+import { View, Text } from 'react-native'
 import React from 'react'
-import { styles } from '../Styles/Styles';
+import { styles } from '../Styles/Styles'
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.homeScreenContainer}>
-      <Image source={require('../assets/homescreenimage.png')}/>
-      <View style={styles.homeTextContainer}>
-          <Text style={styles.welcomeText}>WELCOME TO HOME FLOW</Text>
+    <View style={styles.homeScreenContainer}>
+      <View style={styles.header}>
+        <View style={styles.headerLeft}>
+          <View style={styles.profile}>
+
+          </View>
           <View>
-          <Text style={styles.message1}>Dream A Home</Text>
-          <View style={styles.homeTextInner}>
-            <Text style={styles.message2}>Live It!</Text>
+            <Text>Good Morning</Text>
+            <Text>Richmond Nyamedor</Text>
           </View>
         </View>
+        <View>
+          
+        </View>
       </View>
-      <TouchableOpacity style={styles.signIn}>
-        <Image
-          source={require('../assets/googleIcon.png')}
-        />
-        <Text style={styles.signInText}>
-          Sign Up With Google
-        </Text>
-      </TouchableOpacity>
-      <StatusBar/>
-    </SafeAreaView>
+    </View>
   )
 }
-
