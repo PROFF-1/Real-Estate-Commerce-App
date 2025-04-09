@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
 
   homeScreenContainer:{
     flex:1,
-    backgroundColor:'#fff',
+    backgroundColor:'#edeff0',
   },
 
   authTextContainer:{
@@ -129,7 +129,7 @@ export const styles = StyleSheet.create({
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'space-between',
-    marginHorizontal:20
+    marginHorizontal:15
   },
 
   featured:{
@@ -155,5 +155,97 @@ export const styles = StyleSheet.create({
     height:340,
     width:250,
     borderRadius:20
+  },
+
+  tabs:{
+    alignContent:'center',
+    justifyContent:'space-between',
+    paddingVertical:8,
+    paddingHorizontal:20,
+    borderRadius:30,
+    marginHorizontal:8
+  },
+  tabsContainer:{
+    paddingHorizontal:20,
+    marginVertical:20
+   
+  },
+
+  houseDetails:{
+    backgroundColor:'green',
+    position:'absolute',
+    bottom:0,
+    width:'100%',
+    height:158,
+    backgroundColor:'rgba(0,0,0,0.25)',
+    borderBottomLeftRadius:20,
+    borderBottomRightRadius:20,
+    paddingTop:50,
+    paddingHorizontal: 16,
+    
+  },
+
+  houseName:{
+    fontSize: 20,
+    color:'white',
+    fontWeight:'bold',
+    marginBottom:10,
+  },
+
+  location:{
+    color:'white',
+    fontSize:16,
+    marginBottom:10,
+
+  },
+
+  amountAndLike:{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-between'
+  },
+
+  amount:{
+    fontSize:20,
+    color:'white',
+    fontWeight:'bold'
+  },
+
+  houseImageContainer:{
+    height:154,
+    width:159,
+    
+  },
+
+  itemHolder:{
+    backgroundColor:'#fff',
+    marginHorizontal:5,
+    marginVertical:16,
+   paddingTop:14,
+   paddingHorizontal:14,
+   paddingBottom:20,
+   borderRadius:12
+  },
+
+  otherHouseName:{
+    fontWeight:'bold',
+    fontSize:16,
+    marginTop:12
+  },
+
+
+  otherHouseLocation: {
+    fonSize: 12,
+    color: '#8c8e98',
+    marginVertical:10
+  },
+
+
+  otherHouseAmount:{
+    fontSize: 16,
+    fontWeight:'bold'
   }
+
+
+
 })
