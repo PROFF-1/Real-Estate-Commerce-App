@@ -19,12 +19,14 @@ export const styles = StyleSheet.create({
   authScreenContainer:{
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
   },
 
   homeScreenContainer:{
     flex:1,
     backgroundColor:'#edeff0',
+    paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
   },
 
   authTextContainer:{
@@ -203,6 +205,32 @@ export const styles = StyleSheet.create({
     display:'flex',
     flexDirection:'row',
     justifyContent:'space-between'
+  },
+
+  ratingContainer:{
+    position:'absolute',
+    backgroundColor:'white',
+    flexDirection:'row',
+    paddingHorizontal:12,
+    paddingVertical:4,
+    borderRadius:100,
+    alignItems:'center',
+    justifyContent:'space-between',
+    top:18,
+    right:18
+  },
+  
+  ratingContainer2:{
+    position:'absolute',
+    backgroundColor:'white',
+    flexDirection:'row',
+    paddingHorizontal:6,
+    paddingVertical:4,
+    borderRadius:100,
+    alignItems:'center',
+    justifyContent:'space-between',
+    top:12,
+    right:12
   },
 
   amount:{

@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View,Image, SafeAreaView, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View,Image, SafeAreaView, TouchableOpacity,navigation } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
 import React from 'react'
 import { styles } from '../Styles/Styles';
 
-export default function AuthScreen() {
+export default function AuthScreen({navigation}) {
   return (
     <SafeAreaView style={styles.authScreenContainer}>
       <Image source={require('../assets/homescreenimage.png')}/>
@@ -16,7 +16,9 @@ export default function AuthScreen() {
           </View>
         </View>
       </View>
-      <TouchableOpacity style={styles.signIn}>
+      <TouchableOpacity style={styles.signIn} onPress={()=>{
+        navigation.navigate('Home')
+      }}>
         <Image
           source={require('../assets/googleIcon.png')}
         />

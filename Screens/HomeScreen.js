@@ -66,6 +66,12 @@ export default function HomeScreen() {
                     />
                   </View>
                 </View>
+                <View style={styles.ratingContainer}>
+                  <Image source={require("../assets/Group.png")}
+                    style={{height:15, width:15, marginRight: 5}}
+                  />
+                  <Text>{item.rating}</Text>
+                </View>
               </View>
             )
           }}
@@ -115,6 +121,12 @@ export default function HomeScreen() {
                       tintColor='black'/>
                     </View>
                   </View>
+                  <View style={styles.ratingContainer2}>
+                  <Image source={require("../assets/Group.png")}
+                    style={{height:10, width:10, marginRight: 5}}
+                  />
+                  <Text>{item.rating}</Text>
+                </View>
                  </View>
                )
              }}
