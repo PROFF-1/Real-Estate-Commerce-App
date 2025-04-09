@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View,Platform,StatusBar } from 'react-native'
 import React from 'react'
+import DetailsScreen from '../Screens/DetailsScreen'
 
 export const styles = StyleSheet.create({
   container: {
@@ -21,6 +22,10 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
+  },
+  DetailsScreenContainer:{
+    flex: 1,
+    backgroundColor: '#fff',
   },
 
   homeScreenContainer:{

@@ -4,13 +4,14 @@ import { styles } from './Styles/Styles';
 import SplashScreen from './Screens/SplashScreen';
 import AuthScreen from './Screens/AuthScreen';
 import HomeScreen from './Screens/HomeScreen';
+import DetailsScreen from './Screens/DetailsScreen';
 import { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+function AppScreen() {
   const [isSplash, setIsSplash] = useState(true);
 
   useEffect(() => {
@@ -33,4 +34,12 @@ export default function App() {
       <StatusBar style="auto" />
     </NavigationContainer>
   );
+}
+
+export default function App(){
+  return(
+    <View style={styles.container}>
+      <DetailsScreen/>
+    </View>
+  )
 }
