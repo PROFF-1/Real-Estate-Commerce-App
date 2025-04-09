@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View,Platform,StatusBar } from 'react-native'
 import React from 'react'
-import HomeScreen from '../Screens/HomeScreen'
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
+
    
   },
   splashScreenContainer:{
@@ -18,13 +19,12 @@ export const styles = StyleSheet.create({
   authScreenContainer:{
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
     alignItems: 'center'
   },
 
-  homeScreeenContainer:{
+  homeScreenContainer:{
+    flex:1,
     backgroundColor:'#fff',
-    
   },
 
   authTextContainer:{
@@ -73,5 +73,87 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize:16,
     marginLeft: 10
+  },
+
+  header:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    paddingVertical: 15,
+    marginHorizontal:20,
+    alignItems:'center',
+    height:60
+  },
+  headerLeft:{
+    flexDirection:'row',
+    alignItems:'center',
+  },
+
+  greetings:{
+    color:'grey',
+    marginBottom: 6
+  },
+
+  name:{
+    fontWeight:'500',
+    fontSize: 22
+  },
+
+
+  searchSection:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center',
+    marginVertical:10,
+    marginHorizontal:20,
+    width:390,
+    height:52,
+    borderRadius: 6,
+    paddingleft: 14,
+    paddingRight: 16
+  },
+
+  searchBox:{
+    backgroundColor:'#FBFBFD',
+    width: '80%',
+    height:'100%',
+    paddingLeft: 20,
+    marginHorizontal:10
+
+  },
+
+  icon:{
+    height:20,
+    width:20
+  },
+  featuredHeader:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    marginHorizontal:20
+  },
+
+  featured:{
+    fontSize:20,
+    fontWeight:'bold',
+  },
+
+
+  sellAll:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+    textDecorationLine: 'underline'
+  },
+
+  featuredHouses:{
+    height:340,
+    width: 250,
+    marginRight:20
+  },
+
+  housesPhoto:{
+    height:340,
+    width:250,
+    borderRadius:20
   }
 })

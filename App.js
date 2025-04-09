@@ -15,7 +15,7 @@ export default function App() {
     useEffect(()=>{
       setTimeout(()=>{
         setIsSplash(false)
-      }, 500)
+      }, 100)
     })
  
     return(
