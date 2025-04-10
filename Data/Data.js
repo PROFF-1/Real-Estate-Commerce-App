@@ -89,3 +89,18 @@ export const typesTab=[
     id: '5'
   }
 ]
+
+
+export const amenities=[
+  {
+    name: '8 Beds',
+    icon: require('../assets/bed.png')
+  },{
+    name: '3 bath',
+    icon: require('../assets/bath.png')
+  },
+  {
+    name: '2000 sqft',
+    icon: require('../assets/size.png')
+  }
+]

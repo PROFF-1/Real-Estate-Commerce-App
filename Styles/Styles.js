@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View,Platform,StatusBar } from 'react-native'
 import React from 'react'
 import DetailsScreen from '../Screens/DetailsScreen'
+import { amenities } from '../Data/Data'
 
 export const styles = StyleSheet.create({
   container: {
@@ -277,8 +278,68 @@ export const styles = StyleSheet.create({
   otherHouseAmount:{
     fontSize: 16,
     fontWeight:'bold'
-  }
+  },
 
+  eachhouseDetails:{
+    marginVertical:24,
+    marginHorizontal:20
+  },
+
+
+  apartmentName:{
+    fontWeight: '700',
+    fontSize: 24,
+    marginBottom:16
+  },
+
+  typeTag:{
+    backgroundColor: '#d9dbdb',
+    paddingVertical:6,
+    paddingHorizontal:10,
+    borderRadius: 20,
+    alignItems:'center',
+    justifyContent:'center',
+    marginRight: 20
+  },
+
+  tagContainer:{
+    flexDirection:'row'
+  },
+
+  ratingAndReview:{
+    flexDirection:'row',
+    alignItems:'center',
+
+  },
+  
+  Apartment:{
+    fontWeight: 'bold',
+    fontSize: 10
+  },
+
+  reviewNumber:{
+    fontWeight: 'bold',
+    color: 'grey'
+  },
+
+  amenitiesContainer:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+    marginRight:24
+  },
+
+  iconHolder: {
+    backgroundColor:'#d9dbdb',
+    padding:12,
+    borderRadius:'50%',
+    marginRight: 8
+  },
+
+  amenitiesName:{
+    fontSize:16,
+    fontWeight: 'bold'
+  }
 
 
 })
