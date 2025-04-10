@@ -282,7 +282,7 @@ export const styles = StyleSheet.create({
 
   eachhouseDetails:{
     marginVertical:24,
-    marginHorizontal:20
+    marginHorizontal:15
   },
 
 
@@ -326,7 +326,7 @@ export const styles = StyleSheet.create({
     display:'flex',
     flexDirection:'row',
     alignItems:'center',
-    marginRight:24
+    marginRight:18
   },
 
   iconHolder: {
@@ -339,6 +339,66 @@ export const styles = StyleSheet.create({
   amenitiesName:{
     fontSize:16,
     fontWeight: 'bold'
+  },
+
+  agentDetailsContainer:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    height:70
+
+  },
+
+  agentDetailsLeft:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    width: '65%'
+  },
+  agentDetailsRight:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    width:'20%'
+  },
+
+  agent:{
+    marginBottom: 10,
+    fontWeight:'bold',
+    fontSize:20
+  },
+
+  agentName:{
+    fontWeight:'bold',
+    fontSize: 18,
+    marginBottom:4
+  },
+
+  agentStatus:{
+    fontSize:14,
+    fontWeight:'bold',
+    color:'grey'
+  },
+
+  overviewContainer:{
+    marginHorizontal:15,
+    marginVertical:30
+  },
+
+  overviewHeader:{
+    fontSize: 20,
+    fontWeight:'bold',
+    marginBottom:12,
+    fontFamily:'rubik'
+
+  },
+  overview:{
+    fontSize: 16,
+    color:'grey',
+    fontFamily:'rubik',
+    lineHeight:25
+    
+
   }
 
 
