@@ -104,3 +104,41 @@ export const amenities=[
     icon: require('../assets/size.png')
   }
 ]
+
+
+export const facilities=[
+  {
+    id:'1',
+    name:'Car Parking',
+    icon:require('../assets/fac1.png')
+  }, {
+    id:'2',
+    name:'Swimming',
+    icon:require('../assets/fac2.png')
+  }, {
+    id:'3',
+    name:'Gym ',
+    icon:require('../assets/fac3.png')
+  },
+  {
+    id:'4',
+    name:'Restaurant',
+    icon:require('../assets/fac4.png')
+  }, {
+    id:'5',
+    name:'wi=fi & Ne..',
+    icon:require('../assets/fac5.png')
+  }, {
+    id:'6',
+    name:'Pet Center',
+    icon:require('../assets/fac6.png')
+  }, {
+    id:'7',
+    name:'Sport Center',
+    icon:require('../assets/fac7.png')
+  }, {
+    id:'8',
+    name:'Laundry',
+    icon:require('../assets/fac8.png')
+  },
+]

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,Platform,StatusBar } from 'react-native'
 import React from 'react'
 import DetailsScreen from '../Screens/DetailsScreen'
-import { amenities } from '../Data/Data'
+import { amenities, facilities } from '../Data/Data'
 
 export const styles = StyleSheet.create({
   container: {
@@ -399,6 +399,44 @@ export const styles = StyleSheet.create({
     lineHeight:25
     
 
+  },
+
+  facilitiesContainer:{
+    marginRight:8,
+    marginBottom:20,
+  
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  facilitiesOuterContainer:{
+    marginHorizontal:15,
+    marginVertical:25
+  },
+
+  facilitiesFlatlistHolder:{
+    alignItems:'center'
+  },
+  facilities:{
+    marginBottom: 20,
+    fontSize:20,
+    fontWeight:'bold'
+  },
+  facilityIconHolder:{
+    backgroundColor:'#d9dbdb',
+    height:60,
+    width:60,
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:'50%',
+    marginBottom:8,
+    marginHorizontal:7.4
+  },
+
+  facilityName:{
+    fontSize:14,
+    fontWeight:'400',
+    fontFamily:'rubik'
   }
 
 

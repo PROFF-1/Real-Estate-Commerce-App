@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, Text, View,Image, SafeAreaView, FlatList} from 'react-native'
 import { styles } from '../Styles/Styles'
 import React from 'react'
-import { amenities } from '../Data/Data'
+import { amenities, facilities } from '../Data/Data'
 
 export default function DetailsScreen() {
   return (
@@ -31,7 +31,7 @@ export default function DetailsScreen() {
                   <View style={styles.amenitiesContainer}>
                     <View style={styles.iconHolder}>
                       <Image source={item.icon}
-                      style={{height:20, width:20}}/>
+                      style={{height:20, width:20}} tintColor='black'/>
                     </View>
                     <Text style={styles.amenitiesName}>{item.name}</Text>
                   </View>
@@ -59,10 +59,12 @@ export default function DetailsScreen() {
             <View style={styles.agentDetailsRight}>
               <Image source={require('../assets/Chat.png')}
               
-              style={{height:33,width:33}}/>
+              style={{height:33,width:33}}
+              tintColor='black'/>
               <Image source={require('../assets/call.png')}
               
-              style={{height:33,width:33}}/>
+              style={{height:33,width:33}}
+              tintColor='black'/>
             </View>
           </View>
         </View>
@@ -76,12 +78,27 @@ export default function DetailsScreen() {
         </View>
 
         {/* Faclities Section */}
-        <View>
-          <Text>Faclities</Text>
-          <View>
+        <View style={styles.facilitiesOuterContainer}>
+          <Text style={styles.facilities}>Faclities</Text>
+          <View style={styles.facilitiesFlatlistHolder}>
             <FlatList
-             data={}
-             renderItem={}
+             data={facilities}
+             renderItem={({item})=>{
+              return(
+                <View style={styles.facilitiesContainer}>
+                  <View style={styles.facilityIconHolder}>
+                    <Image source={item.icon} tintColor='black'
+                    style={{height:28,width:28}}/>
+                  </View>
+                  <Text style={styles.facilityName}>
+                    {item.name}
+                  </Text>
+                </View>
+              )
+             }}
+             numColumns={4}
+             showsHorizontalScrollIndicator={false}
+             scrollEnabled={false}
             />
           </View>
         </View>
