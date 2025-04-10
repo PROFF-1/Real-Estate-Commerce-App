@@ -112,6 +112,17 @@ export default function DetailsScreen() {
             <Image source={require('../assets/house9.png')}/>
           </View>
         </View>
+
+        {/*Location section */}
+        <View style={styles.locationSection}>
+          <Text style={styles.location}>Location</Text>
+          <View style={styles.locationDesc}>
+            <Image source={require('../assets/location.png')}
+            style={styles.locationIcon}/>
+            <Text style={styles.address}>Grand City St. 100, New York, United States</Text>
+          </View>
+          <Image source={require('../assets/map.png')}/>
+        </View>
       </ScrollView>
     </SafeAreaView>
   )

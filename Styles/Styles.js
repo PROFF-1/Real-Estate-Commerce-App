@@ -441,7 +441,8 @@ export const styles = StyleSheet.create({
 
   galleryContainer:{
     flexDirection:'row',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    marginBottom:30
   },
 
   gallerySection:{
@@ -454,5 +455,35 @@ export const styles = StyleSheet.create({
     fontFamily:'rubik'
   },
 
-  
+  locationSection:{
+    marginHorizontal:15
+  },
+
+  location:{
+    marginBottom:20,
+    fontSize:20,
+    fontWeight:'bold',
+    fontFamily:'rubik'
+  },
+
+
+  locationDesc:{
+    flexDirection:'row',
+    marginBottom:20
+  },
+
+  locationIcon:{
+    marginRight: 10,
+    height:22,
+    width:20
+  },
+
+
+  address:{
+    fontSize:12,
+    fontWeight:'bold',
+    color:'grey'
+  }
+
+
 })
