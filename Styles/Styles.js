@@ -437,7 +437,22 @@ export const styles = StyleSheet.create({
     fontSize:14,
     fontWeight:'400',
     fontFamily:'rubik'
-  }
+  },
 
+  galleryContainer:{
+    flexDirection:'row',
+    justifyContent:'space-between'
+  },
 
+  gallerySection:{
+    marginHorizontal:15,
+  },
+  gallery:{
+    marginBottom:20,
+    fontSize:20,
+    fontWeight:'bold',
+    fontFamily:'rubik'
+  },
+
+  
 })

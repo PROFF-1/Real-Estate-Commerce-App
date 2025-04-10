@@ -102,6 +102,16 @@ export default function DetailsScreen() {
             />
           </View>
         </View>
+
+        {/* Gallery Section */}
+        <View style={styles.gallerySection}>
+          <Text style={styles.gallery}>Gallery</Text>
+          <View style={styles.galleryContainer}>
+            <Image source={require('../assets/house7.png')}/>
+            <Image source={require('../assets/house8.png')}/>
+            <Image source={require('../assets/house9.png')}/>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   )
