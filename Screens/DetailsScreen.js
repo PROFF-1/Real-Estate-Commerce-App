@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View,Image, SafeAreaView, FlatList} from 'react-native'
+import { ScrollView, StyleSheet, Text, View,Image, SafeAreaView, FlatList,Platform, TouchableOpacity} from 'react-native'
 import { styles } from '../Styles/Styles'
 import React from 'react'
 import { amenities, facilities } from '../Data/Data'
@@ -6,8 +6,8 @@ import { amenities, facilities } from '../Data/Data'
 export default function DetailsScreen() {
   return (
     <SafeAreaView style={styles.DetailsScreenContainer}>
-      <ScrollView>
-
+      <ScrollView style={{marginBottom: Platform.OS === 'android'? 70: 45}}>
+      
         {/* House Details Section */}
         <Image source={require('../assets/house6.png')}/>
         <View style={styles.eachhouseDetails}>
@@ -123,7 +123,46 @@ export default function DetailsScreen() {
           </View>
           <Image source={require('../assets/map.png')}/>
         </View>
+        <View style={styles.reviewContainer}>
+          <View style={styles.reviewHeader}>
+            <View style={styles.reviewHeaderLeft}>
+              <Image source={require('../assets/Group.png')}
+               style={{height:19, width:20}}
+              />
+              <Text style={styles.reviewText}>4.8 (1,275 reviews)</Text>
+            </View>
+            <Text style={styles.sellAll}> See All</Text>
+          </View>
+          <View style={styles.reviewer}>
+            <Image source={require('../assets/reviewer.png')}
+            
+             style={styles.reviewerProfile}
+            />
+            <Text style={styles.reviewerName}>Victor Owusu</Text>
+          </View>
+          <Text style={styles.review}>The apartment is very clean and modern. I really like the interior design. Looks like I'll feel at home 😍</Text>
+          <View style={styles.likeAndDays}>
+            <View style={styles.likeAndDaysLeft}>
+              <Image source={require('../assets/like.png')}
+              tintColor='black'
+              style={{marginRight:10}}/>
+              <Text style={styles.numberOfLikes}>938</Text>
+            </View>
+            <Text style={styles.days}>6 days ago</Text>
+          </View>
+        </View>
+
       </ScrollView>
+        
+      <View style={styles.priceTag}>
+          <View>
+            <Text style={styles.price}>PRICE</Text>
+            <Text style={styles.$17821}>$17821</Text>
+          </View>
+          <TouchableOpacity style={styles.bookButton}>
+            <Text style={styles.bookNow}>Book Now</Text>
+          </TouchableOpacity>
+      </View>
     </SafeAreaView>
   )
 }

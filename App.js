@@ -28,6 +28,8 @@ function AppScreen() {
           <>
             <Stack.Screen name="Auth" component={AuthScreen} />
             <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Details" component={DetailsScreen} />
+
           </>
         )}
       </Stack.Navigator>
@@ -39,7 +41,7 @@ function AppScreen() {
 export default function App(){
   return(
     <View style={styles.container}>
-      <DetailsScreen/>
+      <AppScreen/>
     </View>
   )
 }

@@ -180,16 +180,15 @@ export const styles = StyleSheet.create({
   },
 
   houseDetails:{
-    backgroundColor:'green',
     position:'absolute',
     bottom:0,
     width:'100%',
-    height:158,
     backgroundColor:'rgba(0,0,0,0.25)',
     borderBottomLeftRadius:20,
     borderBottomRightRadius:20,
-    paddingTop:50,
+    paddingTop:35,
     paddingHorizontal: 16,
+    paddingBottom:20
     
   },
 
@@ -210,7 +209,8 @@ export const styles = StyleSheet.create({
   amountAndLike:{
     display:'flex',
     flexDirection:'row',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+
   },
 
   ratingContainer:{
@@ -483,6 +483,120 @@ export const styles = StyleSheet.create({
     fontSize:12,
     fontWeight:'bold',
     color:'grey'
+  },
+
+  reviewContainer:{
+    marginHorizontal:15,
+    marginVertical:30
+  },
+  reviewHeader:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    marginBottom :24
+  },
+
+  reviewHeaderLeft:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    width:'60%',
+    paddingRight:40
+  },
+  
+  reviewText:{
+    fontWeight:'bold',
+    fontSize:18
+  },
+
+  reviewer:{
+    flexDirection:'row',
+    alignItems:'center',
+    marginBottom:12
+  },
+
+  reviewerProfile:{
+    marginRight: 15
+  },
+
+  reviewerName:{
+    fontWeight:'bold',
+    fontSize: 18,
+    marginBottom:4
+  },
+
+  review:{
+    fontSize: 16,
+    color:'grey',
+    fontFamily:'rubik',
+    lineHeight:25
+  },
+
+  likeAndDays:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    marginTop:12
+  },
+
+  likeAndDaysLeft:{
+    flexDirection:'row',
+    alignItems:'center'
+  },
+  days:{
+    color: '#8c8e98',
+    fontSize:14
+  },
+
+  numberOfLikes:{
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+
+  priceTag:{
+    backgroundColor:'#e8eced',
+    height:100,
+    position:'absolute',
+    bottom:0,
+    left:0,
+    right:0,
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    padding: 15,
+    alignItems:'center',
+    flexDirection:'row',
+    justifyContent: 'space-between',
+    borderWidth:2,
+    borderColor:'#e8eced'
+  },
+
+  price:{
+    color: '#8c8e98',
+    fontSize: 14,
+    fontWeight:'bold'
+
+  },
+
+  $17821:{
+    fontSize:24,
+    fontWeight:'bold',
+  },
+
+  bookButton:{
+    backgroundColor:'black',
+    paddingHorizontal:34,
+    paddingVertical:14,
+    borderRadius: 30,
+    shadowColor: '#000',
+    shadowOffset: { width: 1, height: -2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+
+  bookNow:{
+    color:'white',
+    fontWeight:'bold',
+    fontSize:18
   }
 
 

@@ -1,10 +1,10 @@
-import { View, Text,SafeAreaView,Image,TextInput, ScrollView,FlatList} from 'react-native'
+import { View, Text,SafeAreaView,Image,TextInput, ScrollView,FlatList, TouchableOpacity,navigation} from 'react-native'
 import React from 'react'
 import { styles } from '../Styles/Styles'
 import { StatusBar } from 'expo-status-bar'
 import { houses, typesTab, newhouses} from '../Data/Data'
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.homeScreenContainer}>
       <ScrollView>
@@ -53,19 +53,24 @@ export default function HomeScreen() {
                 source={item.photo}
                 style={styles.housesPhoto}
                 />
-                <View style={styles.houseDetails}>
-                  <Text style={styles.houseName}>
-                    {item.name}
-                  </Text>
-                  <Text style={styles.location}>
-                    {item.location}
-                  </Text>
-                  <View style={styles.amountAndLike }>
-                    <Text style={styles.amount}>{item.amount}</Text>
-                    <Image source={require('../assets/like.png')} 
-                    />
-                  </View>
-                </View>
+                <TouchableOpacity style={styles.houseDetails}
+                
+                 onPress={item.id==='2'?()=>
+                  navigation.navigate('Details'): undefined
+                 }
+                >
+                    <Text style={styles.houseName}>
+                      {item.name}
+                    </Text>
+                    <Text style={styles.location}>
+                      {item.location}
+                    </Text>
+                    <View style={styles.amountAndLike }>
+                      <Text style={styles.amount}>{item.amount}</Text>
+                      <Image source={require('../assets/like.png')} 
+                      />
+                    </View>
+                </TouchableOpacity>
                 <View style={styles.ratingContainer}>
                   <Image source={require("../assets/Group.png")}
                     style={{height:15, width:15, marginRight: 5}}
