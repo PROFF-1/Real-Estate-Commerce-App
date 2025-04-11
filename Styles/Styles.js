@@ -222,6 +222,9 @@ export const styles = StyleSheet.create({
   amountAndLike2:{
     display:'flex',
     justifyContent:'space-between',
+    paddingTop:15,
+    paddingBottom:15,
+    paddingRight:25
 
   },
 
@@ -290,9 +293,9 @@ export const styles = StyleSheet.create({
     borderRadius:12,
   },
   itemHolder2:{
-    backgroundColor:'green',
+    backgroundColor:'white',
     marginHorizontal:5,
-    marginVertical:16,
+    marginVertical:10,
     paddingTop:14,
     paddingHorizontal:14,
     borderRadius:12,
@@ -304,10 +307,21 @@ export const styles = StyleSheet.create({
     flexDirection:'row',
   },
 
+  otherhouseDetailsLeft:{
+    marginRight:50
+  },
+
   otherHouseName:{
     fontWeight:'bold',
     fontSize:16,
     marginTop:12
+  },
+
+  otherHouseName2:{
+    fontWeight:'bold',
+    fontSize:16,
+    marginTop:12,
+    marginBottom:12
   },
 
 

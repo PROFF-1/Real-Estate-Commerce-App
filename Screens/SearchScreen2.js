@@ -63,8 +63,8 @@ export default function SearchScreen2() {
                     />
                   </View>
                   <View style={styles.otherhouseDetails}>
-                    <View>
-                      <Text style={styles.otherHouseName}>{item.name}</Text>
+                    <View style={styles.otherhouseDetailsLeft}>
+                      <Text style={styles.otherHouseName2}>{item.name}</Text>
                       <Text style={styles.otherHouseLocation}>{item.location}</Text>
                     </View>
                     <View style={styles.amountAndLike2}>
