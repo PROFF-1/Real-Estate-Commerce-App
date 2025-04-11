@@ -7,7 +7,7 @@ import { houses, typesTab, newhouses} from '../Data/Data'
 export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.homeScreenContainer}>
-      <ScrollView>
+      <ScrollView nestedScrollEnabled={true}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
             <View style={styles.profile}>
@@ -26,18 +26,18 @@ export default function HomeScreen({navigation}) {
           </View>
         </View>
         <View style={styles.searchSection}>
-          <Image source={require('../assets/Search.png')}
-            style={styles.icon}
+            <Image source={require('../assets/Search.png')}
+              style={styles.icon}
+              tintColor='black'
+            />
+            <TextInput
+              placeholder='Search something'
+              style={styles.searchBox}
+            />
+            <Image source={require('../assets/Filter.png')}
+              style={styles.icon}
             tintColor='black'
-          />
-          <TextInput
-            placeholder='Search something'
-            style={styles.searchBox}
-          />
-          <Image source={require('../assets/Filter.png')}
-            style={styles.icon}
-          tintColor='black'
-          />
+            />
         </View>
         <View style={styles.featuredHeader}>
           <Text style={styles.featured}>Featured</Text>
@@ -83,6 +83,7 @@ export default function HomeScreen({navigation}) {
           horizontal
           showsHorizontalScrollIndicator={false}
           keyExtractor={item=>(item.id)}
+          nestedScrollEnabled={true}
           />
         </View>
         <View style={styles.featuredHeader}>
@@ -101,6 +102,7 @@ export default function HomeScreen({navigation}) {
           }}
            horizontal
            showsHorizontalScrollIndicator={false}
+           nestedScrollEnabled={true} 
           />
         </View>
         <View style={{paddingHorizontal:9}}>
@@ -139,8 +141,9 @@ export default function HomeScreen({navigation}) {
              numColumns={2}
              showsHorizontalScrollIndicator={false}
              keyExtractor={item=>(item.id)}
-             nestedScrollEnabled={false}
-          />
+             nestedScrollEnabled={true}
+             scrollEnabled={false}
+         />
         </View>
         <StatusBar/>
       </ScrollView>

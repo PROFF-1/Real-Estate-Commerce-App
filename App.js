@@ -8,6 +8,9 @@ import DetailsScreen from './Screens/DetailsScreen';
 import { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SearchScreen1 from './Screens/SearchScreen1';
+import SearchScreen2 from './Screens/SearchScreen2';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +32,8 @@ function AppScreen() {
             <Stack.Screen name="Auth" component={AuthScreen} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen name="Details" component={SearchScreen1} />
+
 
           </>
         )}
@@ -41,7 +46,7 @@ function AppScreen() {
 export default function App(){
   return(
     <View style={styles.container}>
-      <AppScreen/>
+     <SearchScreen2/>
     </View>
   )
 }

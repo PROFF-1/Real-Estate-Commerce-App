@@ -2,6 +2,7 @@ import { StyleSheet, Text, View,Platform,StatusBar } from 'react-native'
 import React from 'react'
 import DetailsScreen from '../Screens/DetailsScreen'
 import { amenities, facilities } from '../Data/Data'
+import SearchScreen1 from '../Screens/SearchScreen1'
 
 export const styles = StyleSheet.create({
   container: {
@@ -30,6 +31,12 @@ export const styles = StyleSheet.create({
   },
 
   homeScreenContainer:{
+    flex:1,
+    backgroundColor:'#edeff0',
+    paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
+  },
+
+  searchScreen1Container:{
     flex:1,
     backgroundColor:'#edeff0',
     paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
@@ -212,6 +219,11 @@ export const styles = StyleSheet.create({
     justifyContent:'space-between',
 
   },
+  amountAndLike2:{
+    display:'flex',
+    justifyContent:'space-between',
+
+  },
 
   ratingContainer:{
     position:'absolute',
@@ -239,6 +251,23 @@ export const styles = StyleSheet.create({
     right:12
   },
 
+  ratingContainer3:{
+    position:'absolute',
+    backgroundColor:'white',
+    flexDirection:'row',
+    paddingHorizontal:6,
+    paddingVertical:4,
+    borderRadius:100,
+    alignItems:'center',
+    justifyContent:'space-between',
+    top:20,
+    left:64
+  },
+
+  rate:{
+    fontSize:8
+  },
+
   amount:{
     fontSize:20,
     color:'white',
@@ -255,10 +284,24 @@ export const styles = StyleSheet.create({
     backgroundColor:'#fff',
     marginHorizontal:5,
     marginVertical:16,
-   paddingTop:14,
-   paddingHorizontal:14,
-   paddingBottom:20,
-   borderRadius:12
+    paddingTop:14,
+    paddingHorizontal:14,
+    paddingBottom:20,
+    borderRadius:12,
+  },
+  itemHolder2:{
+    backgroundColor:'green',
+    marginHorizontal:5,
+    marginVertical:16,
+    paddingTop:14,
+    paddingHorizontal:14,
+    borderRadius:12,
+  flexDirection:'row',
+  paddingBottom:14
+  },
+
+  otherhouseDetails:{
+    flexDirection:'row',
   },
 
   otherHouseName:{
@@ -597,6 +640,34 @@ export const styles = StyleSheet.create({
     color:'white',
     fontWeight:'bold',
     fontSize:18
+  },
+
+
+  searchScreen1Header:{
+    alignItems:'center',
+    flexDirection:'row',
+    justifyContent:'space-between',
+    paddingHorizontal:15,
+    marginBottom :24,
+    marginTop:15
+  },
+
+  headerText:{
+    fontWeight:'bold',
+    fontSize: 18
+  },
+
+  arrowContainer:{
+    backgroundColor:'#d9dbdb',
+    height:44,
+    width:44,
+    borderRadius:'50%',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  searchResultsContainer:{
+    marginHorizontal:15,
   }
 
 
