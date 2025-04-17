@@ -9,8 +9,17 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: Platform.OS==='android'? StatusBar.currentHeight:0,
+    alignItems:'center',
+    justifyContent:'center'
 
    
+  },
+
+  button:{
+    paddingHorizontal:30,
+    paddingVertical:10,
+    borderRadius: 10,
+    backgroundColor:'#40a2e3'
   },
   splashScreenContainer:{
     flex: 1,
@@ -299,8 +308,8 @@ export const styles = StyleSheet.create({
     paddingTop:14,
     paddingHorizontal:14,
     borderRadius:12,
-  flexDirection:'row',
-  paddingBottom:14
+    flexDirection:'row',
+    paddingBottom:14
   },
 
   otherhouseDetails:{

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,SafeAreaView, ScrollView,Image,TextInput,FlatList} from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView, ScrollView,Image,TextInput,FlatList,TouchableOpacity} from 'react-native'
 import React from 'react'
 import { styles } from '../Styles/Styles'
 import { typesTab, newhouses2} from '../Data/Data'
@@ -8,9 +8,9 @@ export default function SearchScreen2() {
     <SafeAreaView style={styles.searchScreen1Container}>
       <ScrollView>
         <View style= {styles.searchScreen1Header}>
-          <View style={styles.arrowContainer}>
+          <TouchableOpacity style={styles.arrowContainer}>
             <Image source={require('../assets/ArrowLeft.png')}/>
-          </View>
+          </TouchableOpacity>
           <Text style={styles.headerText}>Search for Your Ideal Home</Text>
           <Image source={require('../assets/Notification.png')}/>
         </View>
