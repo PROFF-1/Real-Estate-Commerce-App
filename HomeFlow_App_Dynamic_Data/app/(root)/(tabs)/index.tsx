@@ -11,10 +11,7 @@ export default function Index() {
       }}
     >
       <Text className="font-bold my-10 font-rubik text-3xl">Welcome To Homeflow</Text>
-      <Link href="/Sign-In">Sign In</Link>
-      <Link href="/explore">Explore</Link>
-      <Link href="/profile">Profile</Link>
-      <Link href="/properties/1">Property</Link>
+      
 
     </View>
   );
