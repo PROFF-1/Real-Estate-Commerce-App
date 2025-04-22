@@ -17,13 +17,13 @@ client
   .setPlatform(config.platform!)
 
 
-export const avartar = new Avatars(client);
+export const avatar = new Avatars(client);
 export const account = new Account(client);
 
 
 export async function login(){
   try {
-    const redirectUri =Linking .createURL('/');
+    const redirectUri = Linking.createURL('/');
 
     const response = await account.createOAuth2Token(OAuthProvider.Google, redirectUri);
 
@@ -31,10 +31,10 @@ export async function login(){
     if(!response) 
       throw new Error('Failed to login');
 
-      const browserResult = await openAuthSessionAsync(
-        response. toString(),
-        redirectUri
-      );
+    const browserResult = await openAuthSessionAsync(
+      response. toString(),
+      redirectUri
+    );
     if(browserResult.type !== 'success') throw new Error('Failed to login');
 
     const url = new URL(browserResult.url);
@@ -74,11 +74,11 @@ export async function getCurrentUser(){
     const response = await account.get();
     
     if(response.$id){
-      const userAvatar = avartar.getInitials(response.name);
+      const userAvatar = avatar.getInitials(response.name);
 
       return {
         ...response,
-        avartar: userAvatar.toString(),
+        avatar: userAvatar.toString(),
       }
     }
   }catch(error){
