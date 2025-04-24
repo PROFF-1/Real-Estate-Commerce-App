@@ -5,6 +5,7 @@ import images from "@/constants/images";
 import icons from "@/constants/icons";
 import Search from "@/components/search";
 import { Card, FeaturedCard } from "@/components/Card";
+import Filters from "@/components/Filters";
 export default function Index() {
   return (
     <SafeAreaView className="h-full bg-white">
@@ -39,6 +40,9 @@ export default function Index() {
               <TouchableOpacity>
                 <Text className='text-base font-rubik-bold text-blue-700'>See All</Text>
               </TouchableOpacity>
+            </View>
+            <View>
+              <Filters/>
             </View>
             <View className="flex flex-row gap-5 mt-5">
               <Card />
