@@ -101,7 +101,7 @@ export async function getLatestProperties(){
     const result = await databases.listDocuments(
       config.databaseId!,
       config.propertiesCollectionId!,
-      [Query.orderDesc('$createdAt'), Query.limit(5)],
+      [Query.orderDesc('$createdAt'), Query.limit(10)],
     )
     return result.documents;
   }
