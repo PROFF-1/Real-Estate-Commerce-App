@@ -26,7 +26,7 @@ export default function Index() {
     params:{
       filter: params.filter!,
       query: params.query!,
-      limit : 6
+      limit : 20
     },
     skip: true
   })
@@ -49,7 +49,7 @@ export default function Index() {
         renderItem={
           ({item})=>{return(<Card item={item} onPress={()=>handleCardPressed(item.$id)}/>)}
         }
-        keyExtractor={(item)=> item.toString()}
+        keyExtractor={(item)=> item.$id}
         numColumns={2}
         contentContainerClassName="pb-32"
         columnWrapperClassName="flex gap-5 px-5"
@@ -84,7 +84,7 @@ export default function Index() {
             <FlatList
               data={latestProperties}
               renderItem={({item})=><FeaturedCard item={item} onPress={()=>handleCardPressed(item.$id)}/>}
-              keyExtractor={(item)=> item.toString()}
+              keyExtractor={(item)=> item.$id}
               horizontal
               showsHorizontalScrollIndicator={false}
               contentContainerClassName="flex gap-5 mt-5"
